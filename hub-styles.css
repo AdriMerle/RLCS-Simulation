@@ -1,0 +1,114 @@
+/* --- General layout --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #111;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    background: #222;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Hub page --- */
+.tournament-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tournament-card {
+    background: #1b1b1b;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+}
+.tournament-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Blind prediction view --- */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.card {
+    background: #1b1b1b;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: 500px;
+    width: 100%;
+}
+
+.choices {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    background: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: #eee;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-weight: bold;
+}
+.btn:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+.muted {
+    opacity: 0.6;
+}
+.hidden {
+    display: none;
+}
+
+
+.ranking-group {
+    background: #222;
+    margin: 0.75rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.ranking-group h3 {
+    margin: 0 0 0.5rem 0;
+    color: #4fc3f7;
+}
